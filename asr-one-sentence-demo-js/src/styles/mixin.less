@@ -1,0 +1,44 @@
+@import './var.less';
+
+//通用的文字缩略
+.text-ellipsis() {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.content-page(){
+    position: relative;
+    padding: 16px 20px;
+}
+
+//块级容器title
+.wrapper-title() {
+    padding-left: 12px;
+    margin: 12px 0 16px 0;
+    border-left: 5px solid @main-color;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+//用于label-iput的容器
+.form-cell() {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    margin: 10px 0;
+
+    &>label {
+        flex: 0 0 60px;
+        text-align: center;
+
+        &::after {
+            content: ':';
+        }
+    }
+
+    button {
+        margin: 0 10px;
+    }
+}

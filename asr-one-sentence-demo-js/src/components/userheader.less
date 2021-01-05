@@ -1,0 +1,215 @@
+@import '../styles/var.less';
+
+.header {
+  background-color: #000;
+  height: @header-height;
+}
+.headerContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: @header-color;
+  height: @header-height;
+  max-width: 1700px;
+  margin: auto;
+}
+
+.menu {
+  flex: 1;
+  height: @header-height;
+  font-size: 16px;
+  margin: 0 20px;
+  line-height: normal !important;
+
+  li,
+  li > a {
+    height: @header-height;
+    line-height: @header-height;
+  }
+}
+
+.tool {
+  margin: 0 10px;
+  height: @header-height;
+  line-height: @header-height;
+}
+
+.content {
+  position: relative;
+  height: calc(100% - @header-height);
+  background: #fff;
+}
+.mobileMenu {
+  display: none;
+}
+.pcMenu {
+  display: block;
+  height: @header-height;
+  line-height: @header-height;
+  background: transparent;
+  color: #fff;
+  border: none;
+}
+.rightMenu {
+  margin-left: auto;
+  height: @header-height;
+  line-height: @header-height;
+  background: transparent;
+  color: #fff;
+  border: none;
+}
+:global {
+  #root {
+    font-family: 'Microsoft YaHei', 'PingFang SC', -apple-system,
+      BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans GB', 'Helvetica Neue',
+      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol';
+  }
+  body > span {
+    display: none;
+  }
+  .btn-banner {
+    font-size: 18px;
+    padding: 12px 36px;
+    height: 48px;
+    line-height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .ant-menu-submenu-title:hover {
+    color: #fff !important;
+  }
+
+  .ant-menu-horizontal > .ant-menu-submenu-active {
+    border-bottom-color: transparent !important;
+    color: #fff !important;
+  }
+  .ant-menu-submenu:hover {
+    border-bottom-color: transparent !important;
+  }
+  .ant-menu-horizontal > .ant-menu-item a {
+    color: #fff;
+  }
+  .ant-menu-horizontal > .ant-menu-item a:hover {
+    color: #fff;
+  }
+  .ant-menu-horizontal > .ant-menu-item:hover {
+    color: #fff !important;
+    border-bottom-color: transparent !important;
+  }
+  .ant-menu.ant-menu-dark .ant-menu-item-selected,
+  .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal)
+    .ant-menu-item-selected {
+    background-color: transparent;
+  }
+
+  .ant-menu-dark.ant-menu-horizontal > .ant-menu-item {
+    height: 60px;
+    vertical-align: top;
+  }
+  .ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover {
+    color: #fff !important;
+    border-bottom-color: transparent !important;
+    background-color: transparent !important;
+  }
+  @media (max-width: 1000px) {
+    .ant-form.ant-form-inline .ant-form-item {
+      flex-wrap: nowrap;
+    }
+    .ant-form.ant-form-inline .ant-form-item .ant-form-item-label,
+    .ant-form.ant-form-inline .ant-form-item .ant-form-item-control {
+      flex: none;
+    }
+    .btn-banner {
+      font-size: 14px;
+      padding: 0px 22px;
+      line-height: 31px !important;
+      height: 31px;
+    }
+    .myapp {
+      display: none;
+    }
+  }
+}
+
+.authIcon {
+  height: 40px;
+  width: 40px;
+  vertical-align: bottom;
+  margin-right: 14px;
+}
+.menuIcon {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 12px;
+  margin-top: -4px;
+}
+.usermenu {
+  :global {
+    .ant-menu-item a:hover {
+      color: #333;
+    }
+    .ant-menu-vertical .ant-menu-item {
+      margin-bottom: 0;
+    }
+    .ant-menu-vertical .ant-menu-item:hover {
+      background-color: #eaf1ff;
+    }
+  }
+}
+.headerLogo {
+  width: 212px;
+  margin-right: 12px;
+}
+@media (max-width: 1000px) {
+  .pcMenu {
+    display: none;
+  }
+  .mobileMenu {
+    display: block;
+    height: 60px;
+    background: #000 !important;
+    margin-left: auto;
+  }
+  .rightMenu {
+    display: none;
+  }
+  .header {
+    padding: 0 10px;
+  }
+  .mobilePopup {
+    top: 60px !important;
+    right: 0 !important;
+    left: auto !important;
+  }
+}
+:global {
+  .productPopup {
+    .ant-menu.ant-menu-hidden {
+      display: none;
+    }
+    > .ant-menu-sub {
+      display: flex;
+      width: 520px;
+      padding: 10px 20px;
+      > .ant-menu-item-group {
+        flex: 0 0 160px;
+        .ant-menu-item {
+          font-size: 14px;
+          font-weight: 400;
+          color: #333333;
+        }
+        .ant-menu-item:hover a {
+          color: #3366ff;
+        }
+      }
+      .ant-menu-item-group-title {
+        padding: 8px 28px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #000;
+      }
+    }
+  }
+}

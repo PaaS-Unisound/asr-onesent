@@ -1,0 +1,101 @@
+@import '../../../styles/var.less';
+.boxContainer {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.box {
+  max-width: 560px;
+  flex: 1 1 auto;
+}
+.borderBox {
+  border: 1px solid #393c44;
+  height: 360px;
+  background: #15192b;
+}
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #393c44;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.tab {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #ffffff;
+}
+.tab + .tab {
+  border-left: 1px solid #393c44;
+}
+.tab.active {
+  background-color: @main-color;
+  color: #fff;
+}
+
+.micbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  position: relative;
+  > span {
+    height: 100%;
+  }
+}
+.img {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.imgback {
+  width: 256px;
+  height: 256px;
+  background-image: url(../../../assets/icon_micwave.png);
+  text-align: center;
+  color: #e7a704;
+  margin: auto;
+  overflow: hidden;
+}
+.desc {
+  max-width: 355px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+.result {
+  background-image: url(../../../assets/oneword/icon_voicewave.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 24px;
+  overflow: auto;
+  word-break: break-all;
+}
+.imgtext {
+  width: 87px;
+  margin: auto;
+  margin-top: 105px;
+}
+.button {
+  position: absolute !important;
+  right: 3px;
+  bottom: 3px;
+}
+
+@media screen {
+  @media (max-width: 1024px) {
+    .boxContainer {
+      display: block;
+      padding: 0 20px;
+    }
+    .borderBox {
+      border-radius: 4px;
+    }
+  }
+}

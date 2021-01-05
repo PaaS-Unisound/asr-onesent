@@ -1,0 +1,96 @@
+.container {
+  max-width: 1700px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.title {
+  margin: 90px auto;
+  font-size: 33px;
+  // font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+.subTitle {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.price {
+  max-width: 1200px;
+  margin: auto;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+}
+
+.collum {
+  flex: 1 1 auto;
+  > :first-child {
+    font-weight: 600;
+  }
+}
+.collum:hover {
+  box-shadow: 0px 10px 20px 0px rgba(147, 156, 170, 0.17);
+  background-color: #fff;
+  .cell:first-child {
+    color: #3366ff;
+  }
+}
+
+.cell {
+  display: flex;
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  font-size: 16px;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc {
+  font-size: 14px;
+  color: #424242;
+  line-height: 1.5em;
+  max-width: 1200px;
+  margin: auto;
+}
+.bigBlock {
+  overflow: hidden;
+  padding-bottom: 90px;
+}
+.tabs {
+  width: 100%;
+  :global {
+    .ant-tabs-tab {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      padding: 12px 6px;
+      img {
+        margin: 0 0 0 6px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@media screen {
+  @media (max-width: 1024px) {
+    .title {
+      margin: 45px auto 20px;
+      font-size: 18px;
+    }
+    .subTitle {
+      font-size: 14px;
+      margin: 20px 0 10px;
+    }
+    .bigBlock {
+      padding-bottom: 20px;
+    }
+  }
+}
